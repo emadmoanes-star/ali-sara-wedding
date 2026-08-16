@@ -1,48 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#f8f3ee" />
-  <meta name="description" content="Ali & Sara — Wedding Invitation" />
-  <title>Ali & Sara — Wedding Invitation</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="theme-color" content="#f8f3ee" />
+  <meta name="description" content="Ali & Sara — Wedding Invitation" /><title>Ali & Sara — Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet" /><link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="intro" id="intro" aria-label="Wedding invitation opening">
-    <div class="envelope-wrap">
-      <div class="envelope" id="envelope">
-        <div class="envelope-back"></div>
-        <div class="envelope-letter"><div class="letter-content"><span class="eyebrow">Wedding Invitation</span><h1>Ali <span>&</span> Sara</h1><p class="arabic-preview" lang="ar">لأن الحب جمع بين قلبينا</p><span class="seal">A ♡ S</span></div></div>
-        <div class="envelope-flap"></div>
-      </div>
-      <button class="open-letter" id="openInvitation">Open Invitation</button>
-      <p class="open-hint">A little note for you</p>
-    </div>
-  </div>
-
+  <div class="petal-layer" id="petalLayer" aria-hidden="true"></div>
+  <div class="intro" id="intro" aria-label="Wedding invitation opening"><div class="envelope-wrap"><div class="envelope" id="envelope"><div class="envelope-back"></div><div class="envelope-letter"><div class="letter-content"><span class="eyebrow">Wedding Invitation</span><h1>Ali <span>&</span> Sara</h1><p class="arabic-preview" lang="ar">لأن الحب جمع بين قلبينا</p><span class="seal">A ♡ S</span></div></div><div class="envelope-flap"></div></div><button class="open-letter" id="openInvitation">Open Invitation</button><p class="open-hint">A little note for you</p></div></div>
   <header class="hero section"><div class="hero-photo"></div><div class="hero-overlay"></div><div class="hero-content reveal"><p class="eyebrow">Together with their families</p><h1>Ali <span>&</span> Sara</h1><p class="hero-subtitle">invite you to celebrate the beginning of their forever.</p><div class="date-pill">September 2, 2026</div><a class="ghost-btn" href="#message">Open the invitation</a></div></header>
-
   <main>
     <section class="section message-section" id="message" dir="rtl"><div class="message-card reveal"><p class="eyebrow english-eyebrow">With love</p><h2 class="arabic-heading" lang="ar">دعوة من القلب</h2><p class="arabic-copy" lang="ar">لأن الحب جمع بين قلبينا، قررنا أن نبدأ رحلة العمر معًا ويسعدنا تشريفكم</p><div class="divider">♡</div><p class="arabic-small" lang="ar">وجودكم معنا يزيد فرحتنا جمالًا.</p></div></section>
-
     <section class="section details" id="details"><div class="section-heading reveal"><p class="eyebrow">Save the date</p><h2>Our Wedding Day</h2></div><div class="details-grid"><article class="detail-card reveal"><div class="detail-icon">♡</div><span>Date</span><strong>September 2, 2026</strong></article><article class="detail-card reveal"><div class="detail-icon">◷</div><span>Time</span><strong>8:00 PM</strong></article><article class="detail-card reveal"><div class="detail-icon">⌂</div><span>Venue</span><strong>Jean Hall</strong></article></div><a class="primary-btn dark" href="https://maps.app.goo.gl/PYtH8LPKtymXTGp37?g_st=aw" target="_blank" rel="noopener noreferrer">View Location</a></section>
-
     <section class="section couple-section reveal"><div class="section-heading"><p class="eyebrow">Our favorite moment</p><h2>Together, always.</h2></div><div class="couple-card"><img src="couple.jpg.jpg" alt="Ali and Sara" loading="lazy" /><div class="couple-caption" dir="rtl" lang="ar"><span>♡</span><p>بداية حكاية جديدة، وذكريات أجمل نصنعها معًا.</p></div></div></section>
-
-    <section class="section music-story" id="musicStory"><div class="section-heading reveal"><p class="eyebrow">Our soundtrack</p><h2>One night, one memory.</h2></div><div class="music-card reveal"><div class="vinyl"><span>Ali & Sara</span></div><div class="music-copy"><p class="music-label">Wedding Music</p><h3>Our song</h3><p class="music-note" dir="rtl" lang="ar">هنخلي الصورة والموسيقى جزء من لحظة واحدة، بهدوء ونعومة.</p><button class="primary-btn dark" id="musicCardButton" type="button">Play Music</button><small id="musicStatus">Add your legally obtained audio file as <code>assets/wedding.mp3</code>.</small></div></div></section>
-
+    <section class="section music-story" id="musicStory"><div class="section-heading reveal"><p class="eyebrow">A melody for our forever</p><h2>One night, one memory.</h2></div><div class="music-card reveal"><div class="vinyl"><span>Ali & Sara</span></div><div class="music-copy"><p class="music-label">Wedding Music</p><h3>A melody for our forever</h3><p class="music-note" dir="rtl" lang="ar">لحنٌ صغير يحمل ذكرى كبيرة من ليلتنا.</p><button class="primary-btn dark" id="musicCardButton" type="button">Play Music</button><small id="musicStatus">Add your legally obtained audio file as <code>assets/wedding.mp3</code>.</small></div></div></section>
     <section class="section countdown-section reveal"><div class="section-heading"><p class="eyebrow">Counting the moments</p><h2>Until we say “I do”</h2></div><div class="countdown" id="countdown" aria-label="Countdown to the wedding"><div><strong id="days">00</strong><span>Days</span></div><div><strong id="hours">00</strong><span>Hours</span></div><div><strong id="minutes">00</strong><span>Minutes</span></div><div><strong id="seconds">00</strong><span>Seconds</span></div></div></section>
     <section class="quote-section reveal"><div class="quote-mark">“</div><p>Two souls, one heart, one beautiful story waiting to unfold.</p></section>
     <section class="section timeline reveal"><div class="section-heading"><p class="eyebrow">The celebration</p><h2>A night to remember</h2></div><div class="timeline-list"><div class="timeline-item"><span>08:00 PM</span><div><strong>Welcome</strong><p>Guests arrive and the celebration begins.</p></div></div><div class="timeline-item"><span>08:30 PM</span><div><strong>Wedding Celebration</strong><p>Join us for love, laughter, and unforgettable moments.</p></div></div><div class="timeline-item"><span>After</span><div><strong>Celebrate Together</strong><p>Music, memories, and a night filled with joy.</p></div></div></div></section>
   </main>
-
-  <footer class="footer"><div>Ali & Sara</div><p>Made with love.</p></footer>
-  <button class="music-toggle" id="musicToggle" aria-label="Play wedding music">♫</button>
-  <audio id="weddingMusic" loop preload="metadata" src="assets/wedding.mp3"></audio>
-  <script src="script.js"></script>
-</body>
-</html>
+  <footer class="footer"><div>Ali & Sara</div><p>Made with love.</p></footer><button class="music-toggle" id="musicToggle" aria-label="Play wedding music">♫</button><audio id="weddingMusic" loop preload="metadata" src="assets/wedding.mp3"></audio><script src="script.js"></script>
+</body></html>
