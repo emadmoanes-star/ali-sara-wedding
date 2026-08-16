@@ -5,6 +5,11 @@
   <meta name="description" content="Ali & Sara — Wedding Invitation" /><title>Ali & Sara — Wedding Invitation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet" /><link rel="stylesheet" href="style.css" />
+  <style>
+    .petal-layer{position:fixed!important;inset:0!important;z-index:99999!important;pointer-events:none!important;overflow:hidden!important}
+    .falling-flower{position:absolute;top:-50px;display:block;font-size:24px;line-height:1;animation:flowerFall 9s linear forwards;filter:drop-shadow(0 2px 3px rgba(60,40,35,.2));will-change:transform,opacity}
+    @keyframes flowerFall{0%{transform:translate3d(0,-50px,0) rotate(0deg);opacity:0}8%{opacity:.95}25%{transform:translate3d(35px,25vh,0) rotate(90deg)}50%{transform:translate3d(-30px,52vh,0) rotate(210deg)}75%{transform:translate3d(35px,76vh,0) rotate(300deg)}100%{transform:translate3d(-15px,110vh,0) rotate(420deg);opacity:0}}
+  </style>
 </head>
 <body>
   <div class="petal-layer" id="petalLayer" aria-hidden="true"></div>
@@ -20,4 +25,7 @@
     <section class="section timeline reveal"><div class="section-heading"><p class="eyebrow">The celebration</p><h2>A night to remember</h2></div><div class="timeline-list"><div class="timeline-item"><span>08:00 PM</span><div><strong>Welcome</strong><p>Guests arrive and the celebration begins.</p></div></div><div class="timeline-item"><span>08:30 PM</span><div><strong>Wedding Celebration</strong><p>Join us for love, laughter, and unforgettable moments.</p></div></div><div class="timeline-item"><span>After</span><div><strong>Celebrate Together</strong><p>Music, memories, and a night filled with joy.</p></div></div></div></section>
   </main>
   <footer class="footer"><div>Ali & Sara</div><p>Made with love.</p></footer><button class="music-toggle" id="musicToggle" aria-label="Play wedding music">♫</button><audio id="weddingMusic" loop preload="metadata" src="assets/wedding.mp3"></audio><script src="script.js"></script>
+  <script>
+    (function(){const layer=document.getElementById('petalLayer');const flowers=['🌸','🌷','🌺','🌸','🌷'];function flower(){const p=document.createElement('span');p.className='falling-flower';p.textContent=flowers[Math.floor(Math.random()*flowers.length)];p.style.left=Math.random()*100+'vw';p.style.fontSize=(16+Math.random()*13)+'px';p.style.animationDuration=(7+Math.random()*5)+'s';p.style.animationDelay=(Math.random()*.5)+'s';layer.appendChild(p);setTimeout(()=>p.remove(),13000)}for(let i=0;i<18;i++)setTimeout(flower,i*180);setInterval(flower,650)})();
+  </script>
 </body></html>
