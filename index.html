@@ -1,42 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#f8f3ee" />
-  <meta name="description" content="Ali & Sara — a beautiful beginning to forever." />
+  <meta name="description" content="Ali & Sara — Wedding Invitation" />
   <title>Ali & Sara — Wedding Invitation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="intro" id="intro">
-    <div class="intro-card">
-      <span class="eyebrow">A beautiful beginning</span>
-      <h1>Ali <span>&</span> Sara</h1>
-      <p>Two hearts, one beautiful journey.</p>
-      <button class="primary-btn" id="openInvitation">Open Invitation</button>
+  <div class="intro" id="intro" aria-label="Wedding invitation opening">
+    <div class="envelope-wrap">
+      <div class="envelope" id="envelope">
+        <div class="envelope-back"></div>
+        <div class="envelope-letter">
+          <div class="letter-content">
+            <span class="eyebrow">Wedding Invitation</span>
+            <h1>Ali <span>&</span> Sara</h1>
+            <p class="arabic-preview" lang="ar">لأن الحب جمع بين قلبينا</p>
+            <span class="seal">A ♡ S</span>
+          </div>
+        </div>
+        <div class="envelope-flap"></div>
+      </div>
+      <button class="open-letter" id="openInvitation">Open Invitation</button>
+      <p class="open-hint">A little note for you</p>
     </div>
   </div>
 
   <header class="hero section">
+    <div class="hero-photo"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content reveal">
       <p class="eyebrow">Together with their families</p>
       <h1>Ali <span>&</span> Sara</h1>
       <p class="hero-subtitle">invite you to celebrate the beginning of their forever.</p>
       <div class="date-pill">September 2, 2026</div>
-      <a class="ghost-btn" href="#details">Our Wedding Day</a>
+      <a class="ghost-btn" href="#message">Open the invitation</a>
     </div>
   </header>
 
   <main>
-    <section class="section intro-message reveal">
-      <p class="eyebrow">With love</p>
-      <h2>And so, our forever begins.</h2>
-      <p class="lead">We would be honored to have you with us as we celebrate love, laughter, family, and the start of a lifetime together.</p>
+    <section class="section message-section" id="message" dir="rtl">
+      <div class="message-card reveal">
+        <p class="eyebrow english-eyebrow">With love</p>
+        <h2 class="arabic-heading" lang="ar">دعوة من القلب</h2>
+        <p class="arabic-copy" lang="ar">لأن الحب جمع بين قلبينا، قررنا أن نبدأ رحلة العمر معًا ويسعدنا تشريفكم</p>
+        <div class="divider">♡</div>
+        <p class="arabic-small" lang="ar">وجودكم معنا يزيد فرحتنا جمالًا.</p>
+      </div>
     </section>
 
     <section class="section details" id="details">
@@ -62,6 +77,37 @@
         </article>
       </div>
       <a class="primary-btn dark" href="https://maps.app.goo.gl/PYtH8LPKtymXTGp37?g_st=aw" target="_blank" rel="noopener noreferrer">View Location</a>
+    </section>
+
+    <section class="section couple-section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Our favorite moment</p>
+        <h2>Together, always.</h2>
+      </div>
+      <div class="couple-card">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAP//////////////////////////////////////////////////////////////////////////////////////2wBDAf//////////////////////////////////////////////////////////////////////////////////////wAARCAHgA2gDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AAQIDBAURBiExQVFhZGJxgZEUIyobHB0eHR8CMjU8AkM0OCk6Nz0+Q0RFRkdISUpMTU5PUFFSU1RVVldYWVpeYoCFiY6QkpOUlZaX2BhZ2hqa2xtbm9yc3R1dnd4eXl6fH+DhIWEhYaHh4iJipGSk5iZmp6ip6+vr6Cnpqmt..." alt="Ali and Sara" loading="lazy" />
+        <div class="couple-caption" dir="rtl" lang="ar">
+          <span>♡</span>
+          <p>بداية حكاية جديدة، وذكريات أجمل نصنعها معًا.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section music-story" id="musicStory">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Our soundtrack</p>
+        <h2>One night, one memory.</h2>
+      </div>
+      <div class="music-card reveal">
+        <div class="vinyl"><span>Ali & Sara</span></div>
+        <div class="music-copy">
+          <p class="music-label">Wedding Music</p>
+          <h3>Our song</h3>
+          <p class="music-note" dir="rtl" lang="ar">هنخلي الصورة والموسيقى جزء من لحظة واحدة، بهدوء ونعومة.</p>
+          <button class="primary-btn dark" id="musicCardButton" type="button">Play Music</button>
+          <small id="musicStatus">Please add your licensed audio file as <code>assets/wedding.mp3</code>.</small>
+        </div>
+      </div>
     </section>
 
     <section class="section countdown-section reveal">
@@ -93,21 +139,6 @@
         <div class="timeline-item"><span>After</span><div><strong>Celebrate Together</strong><p>Music, memories, and a night filled with joy.</p></div></div>
       </div>
     </section>
-
-    <section class="section rsvp reveal" id="rsvp">
-      <div class="section-heading">
-        <p class="eyebrow">We would love to see you</p>
-        <h2>Will you join us?</h2>
-        <p class="lead">Your presence will make our day even more special.</p>
-      </div>
-      <form class="rsvp-form" onsubmit="return handleRSVP(event)">
-        <label>Name<input id="guestName" required type="text" placeholder="Your name" /></label>
-        <label>Attendance<select id="attendance" required><option value="">Select</option><option>Joyfully attending</option><option>Regretfully declining</option></select></label>
-        <label>Guests<input id="guestCount" required type="number" min="1" max="10" value="1" /></label>
-        <button class="primary-btn dark" type="submit">Confirm RSVP</button>
-      </form>
-      <p class="form-note">RSVP demo is ready for online integration. We can connect it to Google Sheets / Forms next.</p>
-    </section>
   </main>
 
   <footer class="footer">
@@ -116,7 +147,7 @@
   </footer>
 
   <button class="music-toggle" id="musicToggle" aria-label="Play wedding music">♫</button>
-  <audio id="weddingMusic" loop preload="none" src="https://cdn.pixabay.com/download/audio/2022/10/25/audio_2b4f45c38f.mp3?filename=romantic-piano-ambient-121089.mp3"></audio>
+  <audio id="weddingMusic" loop preload="metadata" src="assets/wedding.mp3"></audio>
 
   <script src="script.js"></script>
 </body>
