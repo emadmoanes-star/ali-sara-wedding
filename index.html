@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f8f3ee" />
+  <meta name="description" content="Ali & Sara — a beautiful beginning to forever." />
+  <title>Ali & Sara — Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="intro" id="intro">
+    <div class="intro-card">
+      <span class="eyebrow">A beautiful beginning</span>
+      <h1>Ali <span>&</span> Sara</h1>
+      <p>Two hearts, one beautiful journey.</p>
+      <button class="primary-btn" id="openInvitation">Open Invitation</button>
+    </div>
+  </div>
+
+  <header class="hero section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content reveal">
+      <p class="eyebrow">Together with their families</p>
+      <h1>Ali <span>&</span> Sara</h1>
+      <p class="hero-subtitle">invite you to celebrate the beginning of their forever.</p>
+      <div class="date-pill">September 2, 2026</div>
+      <a class="ghost-btn" href="#details">Our Wedding Day</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section intro-message reveal">
+      <p class="eyebrow">With love</p>
+      <h2>And so, our forever begins.</h2>
+      <p class="lead">We would be honored to have you with us as we celebrate love, laughter, family, and the start of a lifetime together.</p>
+    </section>
+
+    <section class="section details" id="details">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Save the date</p>
+        <h2>Our Wedding Day</h2>
+      </div>
+      <div class="details-grid">
+        <article class="detail-card reveal">
+          <div class="detail-icon">♡</div>
+          <span>Date</span>
+          <strong>September 2, 2026</strong>
+        </article>
+        <article class="detail-card reveal">
+          <div class="detail-icon">◷</div>
+          <span>Time</span>
+          <strong>8:00 PM</strong>
+        </article>
+        <article class="detail-card reveal">
+          <div class="detail-icon">⌂</div>
+          <span>Venue</span>
+          <strong>Jean Hall</strong>
+        </article>
+      </div>
+      <a class="primary-btn dark" href="https://maps.app.goo.gl/PYtH8LPKtymXTGp37?g_st=aw" target="_blank" rel="noopener noreferrer">View Location</a>
+    </section>
+
+    <section class="section countdown-section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Counting the moments</p>
+        <h2>Until we say “I do”</h2>
+      </div>
+      <div class="countdown" id="countdown" aria-label="Countdown to the wedding">
+        <div><strong id="days">00</strong><span>Days</span></div>
+        <div><strong id="hours">00</strong><span>Hours</span></div>
+        <div><strong id="minutes">00</strong><span>Minutes</span></div>
+        <div><strong id="seconds">00</strong><span>Seconds</span></div>
+      </div>
+    </section>
+
+    <section class="quote-section reveal">
+      <div class="quote-mark">“</div>
+      <p>Two souls, one heart, one beautiful story waiting to unfold.</p>
+    </section>
+
+    <section class="section timeline reveal">
+      <div class="section-heading">
+        <p class="eyebrow">The celebration</p>
+        <h2>A night to remember</h2>
+      </div>
+      <div class="timeline-list">
+        <div class="timeline-item"><span>08:00 PM</span><div><strong>Welcome</strong><p>Guests arrive and the celebration begins.</p></div></div>
+        <div class="timeline-item"><span>08:30 PM</span><div><strong>Wedding Celebration</strong><p>Join us for love, laughter, and unforgettable moments.</p></div></div>
+        <div class="timeline-item"><span>After</span><div><strong>Celebrate Together</strong><p>Music, memories, and a night filled with joy.</p></div></div>
+      </div>
+    </section>
+
+    <section class="section rsvp reveal" id="rsvp">
+      <div class="section-heading">
+        <p class="eyebrow">We would love to see you</p>
+        <h2>Will you join us?</h2>
+        <p class="lead">Your presence will make our day even more special.</p>
+      </div>
+      <form class="rsvp-form" onsubmit="return handleRSVP(event)">
+        <label>Name<input id="guestName" required type="text" placeholder="Your name" /></label>
+        <label>Attendance<select id="attendance" required><option value="">Select</option><option>Joyfully attending</option><option>Regretfully declining</option></select></label>
+        <label>Guests<input id="guestCount" required type="number" min="1" max="10" value="1" /></label>
+        <button class="primary-btn dark" type="submit">Confirm RSVP</button>
+      </form>
+      <p class="form-note">RSVP demo is ready for online integration. We can connect it to Google Sheets / Forms next.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>Ali & Sara</div>
+    <p>Made with love.</p>
+  </footer>
+
+  <button class="music-toggle" id="musicToggle" aria-label="Play wedding music">♫</button>
+  <audio id="weddingMusic" loop preload="none" src="https://cdn.pixabay.com/download/audio/2022/10/25/audio_2b4f45c38f.mp3?filename=romantic-piano-ambient-121089.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
